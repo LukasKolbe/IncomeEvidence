@@ -151,10 +151,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ImportData\" />
-    <Folder Include="Saves\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Icons\coin.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
