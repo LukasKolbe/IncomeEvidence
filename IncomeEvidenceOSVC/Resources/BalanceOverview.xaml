@@ -1,0 +1,159 @@
+﻿<Page x:Class="IncomeEvidenceOSVC.Resources.BalanceOverview"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IncomeEvidenceOSVC.Resources"
+      xmlns:settings="clr-namespace:IncomeEvidenceOSVC.Properties"
+      mc:Ignorable="d" 
+      Loaded="Page_Loaded"
+      d:DesignHeight="500" d:DesignWidth="840"
+      Title="BalanceOverview">
+
+    <Grid Margin="20" Name="OverviewGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListView Grid.ColumnSpan="4"
+                  FontSize="20"
+                  Name="DailyBalanceList">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Datum"
+                                    Width="{Binding Source={x:Static settings:Settings.Default},Path=DateColumnWidth,Mode=TwoWay}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Date,StringFormat={}{0:d. MMMM yyyy}}" 
+                                           TextAlignment="Right"
+                                           Margin="10 0"
+                                           FontSize="15"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Příjmy"
+                                    Width="{Binding Source={x:Static settings:Settings.Default},Path=IncomeColumnWidth,Mode=TwoWay}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Income,StringFormat={}{0:C0}}" 
+                                           TextAlignment="Right"
+                                           Margin="0 0 10 0"
+                                           FontSize="15"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Výdaje"
+                                    Width="{Binding Source={x:Static settings:Settings.Default},Path=CostsColumnWidth,Mode=TwoWay}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Costs,StringFormat={}{0:C0}}" 
+                                           TextAlignment="Right"
+                                           Margin="0 0 10 0"
+                                           FontSize="15"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Poznámky"
+                                    Width="{Binding Source={x:Static settings:Settings.Default},Path=NoteColumnWidth,Mode=TwoWay}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Note}" 
+                                           TextAlignment="Justify"
+                                           FontSize="15"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Přílohy"
+                                    Width="{Binding Source={x:Static settings:Settings.Default},Path=DocCountColumnWidth,Mode=TwoWay}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding DocumentCount}" 
+                                           TextAlignment="Center"
+                                           FontSize="15"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid Grid.Row="1" Grid.ColumnSpan="4"
+              Margin="0 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Celkové příjmy: "
+                       FontSize="20"
+                       Margin="10 0"
+                       TextAlignment="Right"/>
+            <TextBlock Name="SummaryIncome"
+                       Grid.Column="1"
+                       TextAlignment="Left"
+                       FontSize="20"/>
+            <TextBlock Text="Celkové výdaje: "
+                       Grid.Column="2"
+                       FontSize="20"
+                       Margin="10 0"
+                       TextAlignment="Right"/>
+            <TextBlock Name="SummaryCosts"
+                       Grid.Column="3"
+                       TextAlignment="Left"
+                       FontSize="20"/>
+            <TextBlock Text="Celkový zisk: "
+                       Grid.Column="4"
+                       FontSize="20"
+                       Margin="10 0"
+                       TextAlignment="Right"/>
+            <TextBlock Name="Gain"
+                       Grid.Column="5"
+                       TextAlignment="Left"
+                       FontSize="20"/>
+            <Button Grid.Row="1"
+                    Name="NewRecordButton"
+                    Grid.ColumnSpan="2"
+                    Height="30"
+                    Margin="10"
+                    Content="Přidat záznam"
+                    Click="AddNewRecord_Click"
+                    Width="100"/>
+            <Button Grid.Row="1"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    Name="RemoveRecordButton"
+                    Height="30"
+                    Margin="10"
+                    Content="Smazat záznam"
+                    Click="RemoveRecord_Click"
+                    Width="100"/>
+            <Button Grid.Row="1"
+                    Grid.Column="4"
+                    Grid.ColumnSpan="2"
+                    Name="EditRecordButton"
+                    Height="30"
+                    Margin="10"
+                    Content="Upravit záznam"
+                    Click="EditRecord_Click"
+                    Width="100"/>
+        </Grid>
+    </Grid>
+</Page>

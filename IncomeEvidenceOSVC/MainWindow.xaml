@@ -1,0 +1,55 @@
+﻿<Window x:Class="IncomeEvidenceOSVC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IncomeEvidenceOSVC"
+        xmlns:settings="clr-namespace:IncomeEvidenceOSVC.Properties"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
+        MinWidth="1000"
+        MinHeight="500"
+        Width="{Binding Source={x:Static settings:Settings.Default},Path=WindowWidth,Mode=TwoWay}"
+        Height="{Binding Source={x:Static settings:Settings.Default},Path=WindowHeight,Mode=TwoWay}"
+        Title="Money Control">
+    <Window.Resources>
+        <RoutedUICommand x:Key="Export" Text="Export"></RoutedUICommand>
+        <RoutedUICommand x:Key="Import" Text="Import"></RoutedUICommand>
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="Save" Executed="SaveFile_Click" />
+        <CommandBinding Command="New" Executed="NewFile_Click" />
+        <CommandBinding Command="{StaticResource Export}" Executed="Export_Click" />
+        <CommandBinding Command="{StaticResource Import}" Executed="Import_Click" />
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Key="S" Modifiers="Control" Command="Save"/>
+        <KeyBinding Key="N" Modifiers="Control" Command="New"/>
+        <KeyBinding Key="E" Modifiers="Control" Command="{StaticResource Export}"/>
+        <KeyBinding Key="I" Modifiers="Control" Command="{StaticResource Import}"/>
+    </Window.InputBindings>
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Soubor" FontSize="15">
+                    <MenuItem Header="_Nový" Click="NewFile_Click" InputGestureText="Ctrl+N"/>
+                    <MenuItem Header="_Otevřít..." Click="OpenFile_Click"/>
+                    <MenuItem Header="_Uložit" Click="SaveFile_Click" InputGestureText="Ctrl+S" IsEnabled="False"
+                              Name="SaveMenuButton"/>
+                    <MenuItem Header="_Zavřít" Click="CloseFile_Click" IsEnabled="False"
+                              Name="CloseFileMenuButton"/>
+                    <Separator />
+                    <MenuItem Header="_Ukončit" Click="Exit_Click"/>
+                </MenuItem>
+                <MenuItem Header="_Data" FontSize="15">
+                    <MenuItem Header="_Exportovat" Click="Export_Click" InputGestureText="Ctrl+E"/>
+                    <MenuItem Header="_Importovat" Click="Import_Click" InputGestureText="Ctrl+I"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Frame x:Name="MainFrame" 
+               Margin="0 10 0 0"
+               NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>

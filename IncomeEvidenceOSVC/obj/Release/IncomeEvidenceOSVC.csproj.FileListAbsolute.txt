@@ -1,0 +1,53 @@
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Money Control.exe.config
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Money Control.exe
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Money Control.pdb
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Newtonsoft.Json.dll
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Newtonsoft.Json.xml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\MainWindow.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\NewFileNameSelector.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Resources\BalanceOverview.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Resources\RecordForm.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\SavesManager.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\App.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control_MarkupCompile.cache
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control_MarkupCompile.lref
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\MainWindow.baml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\NewFileNameSelector.baml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Resources\BalanceOverview.baml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Resources\RecordForm.baml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\SavesManager.baml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control.g.resources
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\IncomeEvidenceOSVC.Properties.Resources.resources
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\IncomeEvidenceOSVC.csproj.GenerateResource.Cache
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\IncomeEvidenceOSVC.csproj.CoreCompileInputs.cache
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control.exe
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control.pdb
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control_Content.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Icons\coin.ico
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Icons\coin.ico
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Money Control.exe.config
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Money Control.exe
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Money Control.pdb
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Newtonsoft.Json.dll
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Release\Newtonsoft.Json.xml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\MainWindow.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\NewFileNameSelector.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Resources\BalanceOverview.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Resources\RecordForm.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\SavesManager.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\App.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control_Content.g.cs
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control_MarkupCompile.cache
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control_MarkupCompile.lref
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\MainWindow.baml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\NewFileNameSelector.baml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Resources\BalanceOverview.baml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Resources\RecordForm.baml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\SavesManager.baml
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control.g.resources
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\IncomeEvidenceOSVC.Properties.Resources.resources
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\IncomeEvidenceOSVC.csproj.GenerateResource.Cache
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\IncomeEvidenceOSVC.csproj.CoreCompileInputs.cache
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control.exe
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control.pdb
+C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\IncomeEvidenceOSVC.csprojResolveAssemblyReference.cache
