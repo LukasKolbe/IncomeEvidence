@@ -8,7 +8,6 @@ C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Debu
 C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Debug\IncomeEvidenceOSVC.csproj.CoreCompileInputs.cache
 C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Debug\Resources\RecordForm.g.cs
 C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Debug\Resources\RecordForm.baml
-C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Debug\IncomeEvidenceOSVC.csprojResolveAssemblyReference.cache
 C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Debug\SavesManager.g.cs
 C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Debug\Newtonsoft.Json.dll
 C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\bin\Debug\Newtonsoft.Json.xml
