@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0C381848C2F3D220874988F94F3213F8"
+        "MsmKey" = "8:_25EE58D6F429834FDFD1D40EC238FB0F"
         "OwnerKey" = "8:_AAAADFC6AE0E4143BB4D30F41205DD90"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -58,7 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0C381848C2F3D220874988F94F3213F8"
+        "OwnerKey" = "8:_25EE58D6F429834FDFD1D40EC238FB0F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -87,7 +87,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Money Manager Setup.msi"
+        "OutputFilename" = "8:Debug\\Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -174,14 +174,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0C381848C2F3D220874988F94F3213F8"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_25EE58D6F429834FDFD1D40EC238FB0F"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0C381848C2F3D220874988F94F3213F8"
+                    "_25EE58D6F429834FDFD1D40EC238FB0F"
                     {
                     "Name" = "8:Newtonsoft.Json.dll"
                     "Attributes" = "3:512"
@@ -440,15 +440,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MoneyManager"
-        "ProductCode" = "8:{AC3C56E3-919E-403F-9A5E-1E2BFBC7EB54}"
-        "PackageCode" = "8:{6312D4C7-AA63-46DF-BF9A-BF33D9962599}"
+        "ProductCode" = "8:{FC07F153-E575-4C14-9260-E10D9CDE010A}"
+        "PackageCode" = "8:{95BC5718-81C6-459B-AA04-C7906A4E0C96}"
         "UpgradeCode" = "8:{716B0A96-AFB9-447A-A4FC-6C98C0D5A17C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.2"
+        "ProductVersion" = "8:1.0.3"
         "Manufacturer" = "8:Lukáš Kolbe"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -990,7 +990,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_AAAADFC6AE0E4143BB4D30F41205DD90"
             {
-            "SourcePath" = "8:..\\IncomeEvidenceOSVC\\obj\\Debug\\Money Control.exe"
+            "SourcePath" = "8:..\\IncomeEvidenceOSVC\\obj\\Release\\Money Control.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_0952797DE99C495DAA7352FC9749C1A5"

@@ -73,6 +73,7 @@ namespace IncomeEvidenceOSVC
         private static List<Tuple<String, String>> GetSaves()
         {
             var saves = new List<Tuple<String, String>>();
+            App.CheckSavesDirectoryAccess();
             try
             {
                 var files = Directory.GetFiles(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments),"MoneyManagerData", "Saves"));
@@ -102,6 +103,7 @@ namespace IncomeEvidenceOSVC
         private void SaveFile_Click(Object sender, RoutedEventArgs e)
         {
             var json = JsonConvert.SerializeObject(App.DailyBalanceCollection);
+            App.CheckSavesDirectoryAccess();
             try
             {
                 File.WriteAllText(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Saves", App.FileName), json);
@@ -152,8 +154,10 @@ namespace IncomeEvidenceOSVC
             var result = folderPicker.ShowDialog();
             if(result == System.Windows.Forms.DialogResult.OK)
             {
-                var destPath = Path.Combine(folderPicker.SelectedPath,"Export_"+DateTime.Now.GetHashCode()+".zip");
+                var destPath = Path.Combine(folderPicker.SelectedPath,"Export_"+DateTime.Now+".zip");
+                App.CheckSavesDirectoryAccess();
                 var savesToZip = Directory.GetFiles(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Saves"));
+                App.CheckDocumentsDirectoryAccess();
                 var documentsToZip = Directory.GetFiles(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Documents"));
                 try
                 {
@@ -186,23 +190,27 @@ namespace IncomeEvidenceOSVC
             var importFile = filePicker.ShowDialog();
             if(importFile == true)
             {
+                App.CheckDocumentsDirectoryAccess();
+                App.CheckSavesDirectoryAccess();
                 try
                 {
-                    ZipFile.ExtractToDirectory(filePicker.FileName, Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "ImportData"));
-                    var savesPaths = Directory.GetFiles(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "ImportData"), "*.json");
-                    var documentPaths = Directory.GetFiles(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "ImportData")).Where(p => !p.EndsWith(".json")).ToArray();
+                    var info = Directory.CreateDirectory(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Temp"));
+                    ZipFile.ExtractToDirectory(filePicker.FileName, info.FullName);
+                    var savesPaths = Directory.GetFiles(info.FullName, "*.json");
+                    var documentPaths = Directory.GetFiles(info.FullName).Where(p => !p.EndsWith(".json")).ToArray();
                     foreach(var filePath in savesPaths)
                     {
                         var fileName = Path.GetFileName(filePath);
-                        File.Copy(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "ImportData", fileName), Path.Combine(GetFolderPath(SpecialFolder.MyDocuments),"MoneyManagerData", "Saves", fileName),true);
-                        File.Delete(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "ImportData", fileName));
+                        File.Copy(Path.Combine(info.FullName, fileName), Path.Combine(GetFolderPath(SpecialFolder.MyDocuments),"MoneyManagerData", "Saves", fileName),true);
+                        File.Delete(Path.Combine(info.FullName, fileName));
                     }
                     foreach(var filePath in documentPaths)
                     {
                         var fileName = Path.GetFileName(filePath);
-                        File.Copy(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "ImportData", fileName), Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Documents", fileName), true);
-                        File.Delete(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "ImportData", fileName));
+                        File.Copy(Path.Combine(info.FullName, fileName), Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Documents", fileName), true);
+                        File.Delete(Path.Combine(info.FullName, fileName));
                     }
+                    Directory.Delete(info.FullName, true);
                     MessageBox.Show("Import proběhl úspěšně", "", MessageBoxButton.OK);
                 }
                 catch(InvalidDataException)

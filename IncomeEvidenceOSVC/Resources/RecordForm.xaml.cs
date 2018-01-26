@@ -154,46 +154,14 @@ namespace IncomeEvidenceOSVC.Resources
 
         private void OpenDocument(Object sender)
         {
-            // Open document file
             var document = ((ListBoxItem)sender).DataContext as Document;
-            var extension = Path.GetExtension(document.Path);
             try
             {
-                Process.Start(document.Path);
+                Process.Start(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments),document.Path));
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Chyba", MessageBoxButton.OK);
-            }
-            //if(extension == ".pdf")
-            //{
-            //    DisplayPDF(document);
-            //}
-            //else if(extension == ".jpg"|| extension == ".png" || extension == ".jpeg")
-            //{
-
-            //}
-        }
-
-        private void DisplayPDF(Document document)
-        {
-            Process process = null;
-            try
-            {
-                Dispatcher.Invoke(() =>
-                {
-                    var info = new ProcessStartInfo("AcroRd32.exe");
-                    info.Arguments = "/n " + Path.GetTempPath() + "tisk.pdf";
-                    process = Process.Start(info);
-                });
-            }
-            catch(Exception)
-            {
-                var result = MessageBox.Show("Adobe reader nebyl nalezen. Chcete jej stáhnout?", "Chyba", MessageBoxButton.YesNo);
-                if(result == MessageBoxResult.Yes)
-                {
-                    Process.Start(new ProcessStartInfo(new Uri("https://get.adobe.com/cz/reader/").AbsoluteUri));
-                }
             }
         }
 
@@ -218,7 +186,9 @@ namespace IncomeEvidenceOSVC.Resources
 
         private String CopyDocumentLocaly(String fileName)
         {
+            App.CheckDocumentsDirectoryAccess();
             var destPath = Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Documents", Path.GetFileName(fileName));
+            var universalPath = Path.Combine("MoneyManagerData", "Documents", Path.GetFileName(fileName));
             try
             {
                 File.Copy(fileName, destPath);
@@ -227,7 +197,7 @@ namespace IncomeEvidenceOSVC.Resources
             {
                 MessageBox.Show(ex.Message, "Chyba", MessageBoxButton.OK);
             }
-            return destPath;
+            return universalPath;
         }
 
         private void RefreshDocumentList()
@@ -253,7 +223,7 @@ namespace IncomeEvidenceOSVC.Resources
         {
             try
             {
-                File.Delete(selectedItem.Path);
+                File.Delete(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), selectedItem.Path));
             }
             catch(Exception ex)
             {

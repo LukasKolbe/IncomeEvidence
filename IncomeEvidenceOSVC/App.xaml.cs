@@ -4,11 +4,13 @@ using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Data;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Markup;
 using IncomeEvidenceOSVC.Models;
+using static System.Environment;
 
 namespace IncomeEvidenceOSVC
 {
@@ -49,6 +51,58 @@ namespace IncomeEvidenceOSVC
             FileName = fileName;
             IsFileOpened = true;
             LoadData();
+        }
+
+        internal static void CheckSavesDirectoryAccess()
+        {
+            if(!Directory.Exists(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData")))
+            {
+                try
+                {
+                    Directory.CreateDirectory(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData"));
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Chyba", MessageBoxButton.OK);
+                }
+            }
+            if(!Directory.Exists(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Saves")))
+            {
+                try
+                {
+                    Directory.CreateDirectory(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Saves"));
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Chyba", MessageBoxButton.OK);
+                }
+            }
+        }
+
+        internal static void CheckDocumentsDirectoryAccess()
+        {
+            if(!Directory.Exists(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData")))
+            {
+                try
+                {
+                    Directory.CreateDirectory(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData"));
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Chyba", MessageBoxButton.OK);
+                }
+            }
+            if(!Directory.Exists(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Documents")))
+            {
+                try
+                {
+                    Directory.CreateDirectory(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Documents"));
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Chyba", MessageBoxButton.OK);
+                }
+            }
         }
     }
 }

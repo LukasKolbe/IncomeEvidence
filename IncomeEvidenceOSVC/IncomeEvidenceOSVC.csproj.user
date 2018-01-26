@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>publish\</PublishUrlHistory>
-    <InstallUrlHistory />
+    <PublishUrlHistory>\Publish\|C:\Users\l.kolbe\Documents\Publish\|\publish\|\\localhost\Users\l.kolbe\Documents\Publish\|http://localhost:8080/Deploy/</PublishUrlHistory>
+    <InstallUrlHistory>http://localhost:8080/Deploy/|http://localhost:8080/Deploy/IncomeManager/|http://localhost:8080/|\\localhost\Users\l.kolbe\Documents\Publish\|http://localhost/Deploy/</InstallUrlHistory>
     <SupportUrlHistory />
-    <UpdateUrlHistory />
+    <UpdateUrlHistory>http://localhost:8080/Deploy/</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>

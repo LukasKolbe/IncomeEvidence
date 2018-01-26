@@ -12,7 +12,7 @@
         MinHeight="500"
         Width="{Binding Source={x:Static settings:Settings.Default},Path=WindowWidth,Mode=TwoWay}"
         Height="{Binding Source={x:Static settings:Settings.Default},Path=WindowHeight,Mode=TwoWay}"
-        Title="Money Control">
+        Title="Money Manager">
     <Window.Resources>
         <RoutedUICommand x:Key="Export" Text="Export"></RoutedUICommand>
         <RoutedUICommand x:Key="Import" Text="Import"></RoutedUICommand>

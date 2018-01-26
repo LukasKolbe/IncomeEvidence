@@ -37,7 +37,6 @@ namespace IncomeEvidenceOSVC.Resources
             ToggleFileData();
             try
             {
-                GetFolderPath(SpecialFolder.MyDocuments);
                 var stream = File.Open(Path.Combine(GetFolderPath(SpecialFolder.MyDocuments), "MoneyManagerData", "Saves", App.FileName), FileMode.OpenOrCreate);
                 var reader = new StreamReader(stream);
                 var json = reader.ReadToEnd();

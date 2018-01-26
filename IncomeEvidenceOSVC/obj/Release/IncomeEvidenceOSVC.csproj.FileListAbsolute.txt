@@ -51,4 +51,3 @@ C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEviden
 C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control.exe
 C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\Money Control.pdb
 C:\Users\l.kolbe\Source\Repos\IncomeEvidence\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\IncomeEvidenceOSVC.csprojResolveAssemblyReference.cache
-C:\Users\l.kolbe\Source\Repos\IncomeEvidenceSolution\IncomeEvidenceOSVC\obj\Release\IncomeEvidenceOSVC.csprojResolveAssemblyReference.cache
